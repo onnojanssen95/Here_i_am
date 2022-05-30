@@ -1,0 +1,2 @@
+class PinTablesController < ApplicationController
+end
