@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   resources :addresses, only: [:destroy]
   resources :addresses, only:[:new, :show, :index, :create, :edit] do
-    resources :pin_tables, only: [:new, :index, :create, :destroy]
+
+    resources :pin_table, only: [:new, :index, :create, :destroy]
   end
 end

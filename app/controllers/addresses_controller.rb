@@ -5,6 +5,7 @@ class AddressesController < ApplicationController
   end
 
   def show
+    @address = Address.find(params[:id])
   end
 
   def new
@@ -14,7 +15,7 @@ class AddressesController < ApplicationController
   def create
     @address = Address.new(address_params)
       @address.user = current_user
-      @address.save
+      # @address.save
       if @address.save
         redirect_to address_path(@address)
       else

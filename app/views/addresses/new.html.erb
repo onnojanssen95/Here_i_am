@@ -2,7 +2,24 @@
 <%= form_for(@address) do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
+  <br><br><br>
   <%= f.label :address %>
   <%= f.text_field :address %>
+  <br><br><br>
+  <%= f.label :kind_of_place %>
+  <%= f.text_field :kind_of_place %>
+  <br><br><br>
+  <%= f.label :place_in_building %>
+  <%= f.text_field :place_in_building %>
+  <br><br><br>
+  <%= f.label :floor %>
+  <%= f.text_field :floor %>
+  <br><br><br>
+  <%= f.label :elevator, "elevator" %>
+  <%= f.check_box :elevator %>
+  <br><br><br>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <br><br><br>
   <%= f.submit %>
 <% end %>
