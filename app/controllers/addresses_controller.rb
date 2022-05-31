@@ -5,6 +5,7 @@ class AddressesController < ApplicationController
   end
 
   def show
+    @address = Address.find(params[:id])
   end
 
   def new
@@ -14,19 +15,13 @@ class AddressesController < ApplicationController
   def create
     @address = Address.new(address_params)
       @address.user = current_user
-      @address.save
+      # @address.save
       if @address.save
         redirect_to address_path(@address)
       else
         render :new
       end
   end
-
-  @glamping_set = GlampingSet.new(glamping_set_params)
-    @glamping_set.user = current_user
-    @glamping_set.save
-  # No need for app/views/glamping_sets/create.html.erb
-    redirect_to glamping_set_path(@glamping_set)
 
   def edit
   end
