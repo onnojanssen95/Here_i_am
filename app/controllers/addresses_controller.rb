@@ -22,12 +22,6 @@ class AddressesController < ApplicationController
       end
   end
 
-  @glamping_set = GlampingSet.new(glamping_set_params)
-    @glamping_set.user = current_user
-    @glamping_set.save
-  # No need for app/views/glamping_sets/create.html.erb
-    redirect_to glamping_set_path(@glamping_set)
-
   def edit
   end
 
