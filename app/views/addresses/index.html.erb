@@ -1,11 +1,16 @@
 <h1>Your saved addresses</h1>
 
+<h3><%= link_to "back to the home-page", root_path %> </h3>
+<h3><%= link_to "Add another address", new_address_path %></h3>
+
 <% @addresses.each do|address| %>
   <h3>Name: <%= address.name %></h3>
   <p>Address: <%= address.address %></p>
   <h3>kind of building: <%= address.kind_of_place  %></h3>
   <h3>floor: <%= address.floor %></h3>
-<% end %>
 
-<h3><%= link_to "back to the home-page", root_path %> </h3>
-<h3><%= link_to "Add another address", new_address_path %></h3>
+  <h3 class= see address>  <%= link_to "show address", address_path(address) %></h3>
+
+  <br>
+  <br>
+<% end %>
