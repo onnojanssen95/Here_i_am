@@ -1,11 +1,13 @@
 class AddressesController < ApplicationController
   def index
+    @address = Address.all
   end
 
   def show
   end
 
   def new
+    @address = Address.new
   end
 
   def create
@@ -16,7 +18,7 @@ class AddressesController < ApplicationController
 
   def update
   end
-  
+
   def destroy
   end
 end
