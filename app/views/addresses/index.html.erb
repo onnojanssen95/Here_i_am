@@ -1,6 +1,16 @@
+
 <h1>This is going to be the index page</h1>
-<ul>
-  <% @addresses.each do |address| %>
-    <li><%= address.name %></li>
-  <% end %>
-</ul>
+
+<h1>done or no</h1>
+<% @addresses.each do|address| %>
+
+  <h3>Name: <%= address.name %></h3>
+  <p>Address: <%= address.address %></p>
+  <h3>kind of building: <%= address.kind_of_place  %></h3>
+  <h3>floor: <%= address.floor %></h3>
+
+  <%= link_to "back to the home-page", root_path %>
+<% end %>
+
+
+
