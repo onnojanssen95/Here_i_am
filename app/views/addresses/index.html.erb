@@ -1,0 +1,26 @@
+
+
+<% @addresses.each do|address| %>
+
+  <h3>Name: <%= address.name %></h3>
+  <p>Address: <%= address.address %></p>
+  <h3>kind of building: <%= address.kind_of_place  %></h3>
+  <h3>floor: <%= address.floor %></h3>
+  <h2><%=  %></h2>
+
+  <%= link_to "back to the home-page", root_path %>
+<% end %>
+
+
+
+<%#
+   t.string "name"
+    t.string "address"
+    t.string "kind_of_place"
+    t.string "place_in_building"
+    t.integer "floor"
+    t.boolean "elevator"
+    t.text "description"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false %>
