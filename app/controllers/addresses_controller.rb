@@ -1,15 +1,32 @@
 class AddressesController < ApplicationController
-
   def index
     @addresses = Address.all.reverse
+    # @markers = @addresses.geocoded.map do |address|
+    #   {
+    #     lat: address.latitude,
+    #     lng: address.longitude
+    #   }
   end
 
   def show
     @address = Address.find(params[:id])
+
+    @marker = @address.geocode do
+      {
+        lat: @address.latitude,
+        lng: @address.longitude
+    }
+    end
   end
 
   def new
     @address = Address.new
+    # @marker = @address.geocode do
+    #   {
+    #     lat: @address.latitude,
+    #     lng: @address.longitude
+    # }
+    # end
   end
 
   def create
@@ -44,5 +61,4 @@ class AddressesController < ApplicationController
   def address_params
     params.require(:address).permit(:name, :address, :kind_of_place, :place_in_building, :floor, :elevator, :description)
   end
-
 end
