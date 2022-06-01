@@ -7,6 +7,7 @@
 <p><%= @address.floor %></p>
 <p><%= @address.elevator %></p>
 <p><%= @address.description %></p>
+<%= cl_image_tag @address.photo.key, height: 300, width: 400, crop: :fill %>
 <%= link_to "My addresses", addresses_path %>
 
 

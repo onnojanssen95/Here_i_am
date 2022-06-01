@@ -1,5 +1,5 @@
 <h1>This is going to be the new page</h1>
-<%= form_for(@address) do |f| %>
+<%= simple_form_for(@address) do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
   <br><br><br>
@@ -31,6 +31,10 @@
 
   <%= f.label :description %>
   <%= f.text_field :description %>
+
+  <%= f.label :image %>
+  <%= f.input :photo, as: :file %>
+
   <br><br><br>
 
   <%= f.submit %>
