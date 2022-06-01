@@ -2,7 +2,6 @@ class Address < ApplicationRecord
   belongs_to :user
 
   validates :name, presence: true
-  validates :name, uniqueness: true
   validates :address, presence: true
   validates :kind_of_place, presence: true
   validates :floor, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
