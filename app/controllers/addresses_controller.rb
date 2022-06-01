@@ -11,12 +11,10 @@ class AddressesController < ApplicationController
   def show
     @address = Address.find(params[:id])
 
-    @marker = @address.geocode do
-      {
-        lat: @address.latitude,
-        lng: @address.longitude
-    }
-    end
+    @markers = [{
+        lat: @address.geocode[0],
+        lng: @address.geocode[1]
+    }]
   end
 
   def new

@@ -9,3 +9,10 @@
 <p><%= @address.description %></p>
 <%= link_to "My addresses", addresses_path %>
 <%= link_to "Edit my address", edit_address_path %>
+
+<div data-controller="map"
+  id="map"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
+  data-map-markers-value="<%= @markers.to_json %>"
+  style="width: 100%; height: 300px;">
+</div>
