@@ -2,7 +2,9 @@
 
 <h3><%= link_to "back to the home-page", root_path %> </h3>
 <h3><%= link_to "Add another address", new_address_path %></h3>
-
+<br>
+<br>
+<br>
 <% @addresses.each do|address| %>
   <h3>Name: <%= address.name %></h3>
   <p>Address: <%= address.address %></p>
