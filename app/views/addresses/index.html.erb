@@ -1,18 +1,50 @@
-<h1>Your saved addresses</h1>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
-<h3><%= link_to "back to the home-page", root_path %> </h3>
-<h3><%= link_to "Add another address", new_address_path %></h3>
-<br>
-<br>
-<br>
-<% @addresses.each do|address| %>
-  <h3>Name: <%= address.name %></h3>
-  <p>Address: <%= address.address %></p>
-  <h3>kind of building: <%= address.kind_of_place  %></h3>
-  <h3>floor: <%= address.floor %></h3>
 
-  <h3 class= see address>  <%= link_to "show address", address_path(address) %></h3>
+<h3><% link_to "back to the home-page", root_path %> </h3>
+<h3><% link_to "Add another address", new_address_path %></h3>
 
-  <br>
-  <br>
-<% end %>
+<div class="container-address-index" data-controller="dropdown">
+
+    <h1 class="my_addresses"><strong>My addresses</strong></h1>
+
+    <div class="add-new-address-1" >
+      <a class="add-new-address">
+        <i class="material-symbols-outlined">add_circle</i>
+        <h2>Add new address </h2>
+      </a>
+    </div>
+
+
+    <% @addresses.each do|address| %>
+      <div class="card-address">
+
+       <div class="d-flex justify-content-between align-items-center">
+        <span class="material-symbols-outlined">apartment</span>
+          <div>
+            <h3><strong><%= address.name %></strong></h3>
+            <p><%= address.address %></p>
+          </div>
+
+
+          <div class="dropdown">
+            <button data-action="click->dropdown#toggle" class="material-symbols-outlined" type="button" id="<%= address.id %>">more_vert</button>
+          </div>
+
+
+        </div>
+        <div class="dropdownmenu" id="menu-<%= address.id %>">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div>
+
+      <%# <h3 class= see address>  <%= link_to "show address", address_path(address) %></h3>
+
+
+    <% end %>
+
+</div>
