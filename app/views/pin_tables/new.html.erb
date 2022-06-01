@@ -1,0 +1,20 @@
+<h1>This is going to be the new page</h1>
+<%= form_for(@address) do |f| %>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <br><br><br>
+
+  <%= f.label :pin_type %>
+  <%= f.text_field :pin_type %>
+  <br><br><br>
+
+  <%= f.label :latitude %>
+  <%= f.float :latitude %>
+  <br><br><br>
+
+  <%= f.label :longitude %>
+  <%= f.float :longitude %>
+  <br><br><br>
+
+  <%= f.submit %>
+<% end %>
