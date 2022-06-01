@@ -6,9 +6,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-  resources :addresses, only: [:show, :destroy]
-  resources :addresses, only:[:new,  :index, :create, :edit, :update] do
-
+  # resources :addresses, only:[:new,:show,  :index, :create, :edit, :update]
+  resources :addresses do
     resources :pin_table, only: [:new, :index, :create, :destroy]
   end
 end
