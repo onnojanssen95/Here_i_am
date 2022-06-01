@@ -6,6 +6,9 @@ class Address < ApplicationRecord
   validates :kind_of_place, presence: true
   validates :floor, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   validates :elevator, exclusion: [nil]
+
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 end
 
 
