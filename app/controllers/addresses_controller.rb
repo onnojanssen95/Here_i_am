@@ -29,13 +29,12 @@ class AddressesController < ApplicationController
 
   def create
     @address = Address.new(address_params)
-    @address.user = current_user
-    # @address.save
-    if @address.save
-      redirect_to addresses_path(@address)
-    else
-      render :new
-    end
+      @address.user = current_user
+      if @address.save
+        redirect_to address_path(@address)
+      else
+        render :new
+      end
   end
 
   def edit
@@ -48,14 +47,16 @@ class AddressesController < ApplicationController
     redirect_to address_path(@address)
   end
 
-
-
   def destroy
+    @address = Address.find(params[:id])
+    @address.destroy
+    redirect_to addresses_path, status: :see_other
+    # redirect_to  glamping_set_bookings_path(@booking.glamping_set), status: :see_other
   end
 
   private
 
   def address_params
-    params.require(:address).permit(:name, :address, :kind_of_place, :place_in_building, :floor, :elevator, :description)
+    params.require(:address).permit(:name, :address, :kind_of_place, :place_in_building, :floor, :elevator, :description, :photo)
   end
 end
