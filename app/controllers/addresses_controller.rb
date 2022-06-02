@@ -11,10 +11,10 @@ class AddressesController < ApplicationController
   def show
     @address = Address.find(params[:id])
 
-    # @markers = [{
-    #     lat: @address.geocode[0],
-    #     lng: @address.geocode[1]
-    # }]
+    @markers = [{
+        lat: @address.geocode[0],
+        lng: @address.geocode[1]
+    }]
   end
 
 
@@ -29,8 +29,7 @@ class AddressesController < ApplicationController
   end
 
   def create
-    # raise
-    # if address.photo?
+
       @address = Address.new(address_params)
       @address.user = current_user
       if @address.save
@@ -38,9 +37,7 @@ class AddressesController < ApplicationController
       else
         render :new
       end
-    # else
-    # render :new
-    # end
+
   end
 
   def edit
