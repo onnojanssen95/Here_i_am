@@ -1,36 +1,55 @@
-<h1>This is going to be the new page</h1>
-<%= simple_form_for(@address) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <br><br><br>
 
-  <%= f.label :address %>
-  <%= f.text_field :address %>
-  <br><br><br>
+<div class="big-container-new-address">
+  <div class="container-new-address">
 
-  <%= f.label :kind_of_place %>
-  <%= f.text_field :kind_of_place %>
-  <br><br><br>
+    <div class="create-form">
 
-  <%= f.label :place_in_building %>
-  <%= f.text_field :place_in_building %>
-  <br><br><br>
+      <%= simple_form_for(@address) do |f| %>
 
-  <%= f.label :floor %>
-  <%= f.text_field :floor %>
-  <br><br><br>
+        <div class="text-input">
+          <%= f.label :name %>
+          <%= f.text_field :name %>
+        </div>
 
-  <%= f.label :elevator, "elevator" %>
-  <%= f.check_box :elevator %>
-  <br><br><br>
+        <div class="text-input">
+          <%= f.label :address %>
+          <%= f.text_field :address %>
+        </div>
 
-  <%= f.label :description %>
-  <%= f.text_field :description %>
+        <div class="text-input">
+          <%= f.label :kind_of_place %>
+          <%= f.text_field :kind_of_place %>
+        </div>
 
-  <%# <%= f.label :image %>
-  <%# <%= f.input :photo, as: :file %> %> %>
+        <div class="text-input">
+          <%= f.label :place_in_building %>
+          <%= f.text_field :place_in_building %>
+        </div>
 
-  <br><br><br>
+        <div class="text-input">
+          <%= f.label :floor %>
+          <%= f.text_field :floor %>
+        </div>
 
-  <%= f.submit %>
-<% end %>
+        <div class="elevator-1">
+          <%= f.label :elevator, "Elevator" %>
+          <%= f.check_box :elevator %>
+        </div>
+
+        <div class="text-input">
+          <%= f.label :description %>
+          <%= f.text_field :description %>
+        </div>
+
+        <div>
+          <%= f.label :image %>
+          <%= f.input :photo, as: :file %>
+        </div>
+
+        <div>
+          <%= f.submit %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
