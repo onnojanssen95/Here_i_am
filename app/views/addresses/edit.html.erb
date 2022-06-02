@@ -1,32 +1,47 @@
 <h1>Edit the field you want</h1>
-<%= form_for(@address) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+ <%= simple_form_for(@address) do |f| %>
+
+  <div class="text-input">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+    <%= f.input :address,
+input_html: {data: {address_autocomplete_target: "address"}, class: "d-none" },
+wrapper_html: {data: {controller: "address-autocomplete", address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}}
+%>
 <br><br><br>
+  <div class="text-input">
+    <%= f.label :kind_of_place %>
+    <%= f.text_field :kind_of_place %>
+  </div>
 
-  <%= f.label :address %>
-  <%= f.text_field :address %>
-  <br><br><br>
+  <div class="text-input">
+    <%= f.label :place_in_building %>
+    <%= f.text_field :place_in_building %>
+  </div>
 
-  <%= f.label :kind_of_place %>
-  <%= f.text_field :kind_of_place %>
-  <br><br><br>
+  <div class="text-input">
+    <%= f.label :floor %>
+    <%= f.text_field :floor %>
+  </div>
 
-  <%= f.label :place_in_building %>
-  <%= f.text_field :place_in_building %>
-  <br><br><br>
+  <div class="elevator-1">
+    <%= f.label :elevator, "Elevator" %>
+    <%= f.check_box :elevator %>
+  </div>
 
-  <%= f.label :floor %>
-  <%= f.text_field :floor %>
-  <br><br><br>
+  <div class="text-input">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
 
-  <%= f.label :elevator, "elevator" %>
-  <%= f.check_box :elevator %>
-  <br><br><br>
+  <div>
+    <%= f.label :image %>
+    <%= f.input :photo, as: :file %>
+  </div>
 
-  <%= f.label :description %>
-  <%= f.text_field :description %>
-  <br><br><br>
-
-  <%= f.submit %>
+  <div>
+    <%= f.submit %>
+  </div>
 <% end %>
