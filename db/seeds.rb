@@ -21,7 +21,7 @@ n = 0
   puts user.email
   address = Address.new(
     name: "home#{n}",
-    address: " rudi geluksstrasse 27",
+    address: "Rudi-Dutschke-Strasse 27",
     kind_of_place: "apartment",
     place_in_building: " achterhuis",
     floor: rand(1..10),
