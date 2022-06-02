@@ -48,7 +48,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_01_145746) do
     t.string "kind_of_place"
     t.string "place_in_building"
     t.integer "floor"
-    t.boolean "elevator", default: false
+    t.boolean "elevator"
     t.text "description"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
