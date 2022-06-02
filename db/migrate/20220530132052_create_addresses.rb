@@ -4,9 +4,9 @@ class CreateAddresses < ActiveRecord::Migration[7.0]
       t.string :name
       t.string :address
       t.string :kind_of_place
-      t.string :place_in_building
-      t.integer :floor
-      t.boolean :elevator
+      t.string :place_in_building, null: true
+      t.integer :floor, null: true
+      t.boolean :elevator, default: false
       t.text :description
       t.references :user, null: false, foreign_key: true
 
