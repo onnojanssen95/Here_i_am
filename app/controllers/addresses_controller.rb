@@ -11,11 +11,12 @@ class AddressesController < ApplicationController
   def show
     @address = Address.find(params[:id])
 
-    @markers = [{
-        lat: @address.geocode[0],
-        lng: @address.geocode[1]
-    }]
+    # @markers = [{
+    #     lat: @address.geocode[0],
+    #     lng: @address.geocode[1]
+    # }]
   end
+
 
   def new
     @address = Address.new
@@ -28,13 +29,18 @@ class AddressesController < ApplicationController
   end
 
   def create
-    @address = Address.new(address_params)
+    # raise
+    # if address.photo?
+      @address = Address.new(address_params)
       @address.user = current_user
       if @address.save
         redirect_to address_path(@address)
       else
         render :new
       end
+    # else
+    # render :new
+    # end
   end
 
   def edit
