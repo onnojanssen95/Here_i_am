@@ -1,0 +1,35 @@
+.container-show-address {
+  display: flex;
+  // flex-direction: row;
+  // justify-content: center;
+  flex-direction: row;
+  justify-content: center;
+  // width: 400px;
+
+
+
+}
+.information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 360px;
+  height: 760px;
+}
+
+.address-show {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+
+}
+
+.other-info {
+  padding: 20px 10px;
+
+
+.each-info {
+  font-size: 16px;
+  color: black;
+}
+}
