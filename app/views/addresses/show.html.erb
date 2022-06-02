@@ -5,10 +5,6 @@
 
 <div class="container-show-address">
   <div>
-    <div class="address-show">
-      <h2><strong><%= @address.address %></strong></h2>
-    </div>
-
     <div data-controller="map"
       id="map"
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
@@ -17,16 +13,18 @@
       >
     </div>
 
-    <h2><%= @address.name %></h2>
+    <div class="address-show">
+      <h2><strong><%= @address.name %></strong></h2>
+      <h3><%= @address.address %></h3>
+    </div>
 
-
-      <p>Type of the building: <%= @address.kind_of_place %></p>
+      <%# <p>Type of the building: = @address.kind_of_place</p> %>
 
       <div class="other-info">
 
       <div class="place-in-building">
-        <span class="material-symbols-outlined">apartment</span>
-        <h3><strong></strong><%= @address.place_in_building %></h3>
+        <i class="material-symbols-outlined" >apartment</i>
+        <h3><strong><%= @address.place_in_building %></strong></h3>
       </div>
 
       <div class="floor">
@@ -35,33 +33,28 @@
 
       <div class="elevator">
         <% if @address.elevator %>
-          <span class="material-symbols-outlined">elevator</span>
-          <h3>Elevator</h3>
+          <i class="material-symbols-outlined">elevator</i>
+          <h3><strong>Elevator</strong></h3>
         <% else %>
-          <span class="material-symbols-outlined">stairs</span>
-          <h3>Stairs</h3>
+          <i class="material-symbols-outlined">stairs</i>
+          <h3><strong>Stairs</strong></h3>
         <% end %>
       </div>
 
     </div>
 
+      <h4 class="description"><strong>Description: </strong><%= @address.description %></h4>
 
-
-      <p class="description"><strong>Description: </strong><%= @address.description %></p>
-
-      <%= cl_image_tag @address.photo.key, height: 300, width: 400, crop: :fill %>
+      <%= cl_image_tag @address.photo.key, height: 300, width: 400 %>
       <%#= link_to "My addresses", addresses_path %>
 
 
-
-    <%= link_to "Edit my address", edit_address_path %>
-
-
-
-
-    <div class = "delete-button1">
-        <%= link_to "Delete address", address_path(@address),
-      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+    <div class="show-buttons">
+      <a><%= link_to "Edit my address", edit_address_path, class: "btn btn-1" %></a>
+      <a><%= link_to "Delete address", address_path(@address),
+        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-2" %>
+      </a>
     </div>
+
   </div>
 </div>

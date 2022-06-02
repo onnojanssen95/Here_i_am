@@ -4,7 +4,7 @@
   // justify-content: center;
   flex-direction: row;
   justify-content: center;
-  // width: 400px;
+  padding-left: 43px;
 
 
 
@@ -19,13 +19,37 @@
 
 .address-show {
   display: flex;
+  flex-direction: column;
   padding: 10px;
-  justify-content: center;
+  // justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
 
+.address-show h2 {
+  padding-bottom: 5px;
+}
+
+.address-show h3 {
+  padding: 5px;
+  border-bottom: 1px solid black;
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .other-info {
   padding: 20px 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.other-info i {
+  display: flex;
+  justify-content: space-around;
+  font-size: 65px;
+  padding-top: 5px;
+}
+
+.other-info h3 {
   display: flex;
   justify-content: space-around;
 }
@@ -36,37 +60,47 @@
 // }
 
 .floor {
-  background-color: #A5BECC;
+  background-color: #82DBD8;
   border-radius: 8px;
-  font-size: 30px;
+  font-size: 40px;
   color: black;
   display: flex;
-
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 90px;
-  width: 90px;
-
+  height: 100px;
+  width: 100px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .floor h3 {
   padding: 14px;
+  font-size: 28px;
 }
 
 .elevator {
-  background-color: #A5BECC;
+  background-color: #82DBD8;
   border-radius: 8px;
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
 }
 
 .place-in-building {
-  background-color: #A5BECC;
+  background-color: #82DBD8;
   border-radius: 8px;
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .description {
-  
+  padding: 20px;
+}
+
+.show-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
