@@ -11,8 +11,10 @@
     <h1 class="my_addresses"><strong>My addresses</strong></h1>
 
     <div class="add-new-address-1" >
-      <a class="add-new-address">
-        <i class="material-symbols-outlined">add_circle</i>
+      <a href="/addresses" class="material-symbols-outlined">
+        <i class="material-symbols-outlined"
+
+        >add_circle</i>
         <h2>Add new address </h2>
       </a>
     </div>
@@ -22,23 +24,23 @@
       <div class="card-address">
 
        <div class="d-flex justify-content-between align-items-center">
-        <i class="material-symbols-outlined" widht="100px">apartment</i>
+        <span class="material-symbols-outlined">apartment</span>
           <div>
-            <h3><strong><%= address.name %></strong></h3>
+            <a href="/addresses/show/<%=address.id%>" ><strong><%= address.name %></strong></a>
             <p><%= address.address %></p>
           </div>
-
+<%=  %>
 
           <div class="dropdown">
-            <button data-action="click->dropdown#toggle" class="material-symbols-outlined" type="button" id="<%= address.id %>">more_vert</button>
+            <i data-action="click->dropdown#toggle" class="material-symbols-outlined" type="button" id="<%= address.id %>">more_vert</i>
           </div>
 
 
         </div>
         <div class="dropdownmenu" id="menu-<%= address.id %>">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="#">Share</a>
+          <a class="dropdown-item" href="#">Edit</a>
+          <a class="dropdown-item" href="#">Delete</a>
         </div>
       </div>
 

@@ -23,13 +23,26 @@
 
 
 .add-new-address {
-  display: flex;
+  // display: flex;
   // flex-direction: column;
 
 }
 
-.add-new-address-1 {
+.add-new-address-1  {
+  width: 100%;
+  // display: flex;
+  // align-items: center;
+  border-bottom: 1px solid black;
 
+}
+
+.add-new-address-1 a {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px;
+  color: black;
 }
 
 .card-address {
