@@ -26,10 +26,47 @@
 
 .other-info {
   padding: 20px 10px;
-
-
-.each-info {
-  font-size: 16px;
-  color: black;
+  display: flex;
+  justify-content: space-around;
 }
+
+// .each-info {
+//   font-size: 16px;
+//   color: black;
+// }
+
+.floor {
+  background-color: #A5BECC;
+  border-radius: 8px;
+  font-size: 30px;
+  color: black;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  width: 90px;
+
+}
+
+.floor h3 {
+  padding: 14px;
+}
+
+.elevator {
+  background-color: #A5BECC;
+  border-radius: 8px;
+  width: 90px;
+  height: 90px;
+}
+
+.place-in-building {
+  background-color: #A5BECC;
+  border-radius: 8px;
+  width: 90px;
+  height: 90px;
+}
+
+.description {
+  
 }
