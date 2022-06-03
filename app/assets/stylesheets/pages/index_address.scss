@@ -2,9 +2,9 @@
 .container-address-index {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   justify-content: center;
-  padding: 0 20px;
+  padding: 0;
 
 }
 
@@ -24,9 +24,11 @@
 
 .add-new-address-1  {
   width: 100%;
-  // display: flex;
-  // align-items: center;
+  display: flex;
+  align-items: center;
   border-bottom: 1px solid black;
+  padding: 0 15px;
+  margin-bottom: 10px;
 }
 
 .add-new-address-1 a {
@@ -50,8 +52,8 @@
 }
 
 .card-address span {
-  height: 60 px;
-  width: 60 px;
+  height: 60px;
+  width: 60px;
   object-fit: cover;
   // padding-left: 20px;
 }
@@ -96,4 +98,22 @@ p {
 
   .nav__link--active {
     color: #009578;
+}
+
+.address-link {
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  width: 330px;
+  text-decoration: none;
+  color: black;
+}
+
+// d-flex justify-content-between align-items-left
+//
+.info-card {
+  display: flex;
+  padding-left: 15px;
+  margin-top: 5px;
+
 }
