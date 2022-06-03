@@ -22,33 +22,33 @@
 
       <div class="other-info">
 
-      <div class="place-in-building">
-        <i class="material-symbols-outlined" >apartment</i>
-        <h3><strong><%= @address.place_in_building %></strong></h3>
-      </div>
+        <div class="place-in-building">
+          <i class="material-symbols-outlined" >apartment</i>
+          <h3><strong><%= @address.place_in_building %></strong></h3>
+        </div>
 
-      <div class="floor">
-        <h3><strong><%= @address.floor %>th floor</h3></strong>
-      </div>
+        <div class="floor">
+          <h3><strong><%= @address.floor %>th floor</h3></strong>
+        </div>
 
-      <div class="elevator">
-        <% if @address.elevator %>
-          <i class="material-symbols-outlined">elevator</i>
-          <h3><strong>Elevator</strong></h3>
-        <% else %>
-          <i class="material-symbols-outlined">stairs</i>
-          <h3><strong>Stairs</strong></h3>
-        <% end %>
-      </div>
+        <div class="elevator">
+          <% if @address.elevator %>
+            <i class="material-symbols-outlined">elevator</i>
+            <h3><strong>Elevator</strong></h3>
+          <% else %>
+            <i class="material-symbols-outlined">stairs</i>
+            <h3><strong>Stairs</strong></h3>
+          <% end %>
+        </div>
 
-    </div>
+      </div>
 
       <h4 class="description"><strong>Description: </strong><%= @address.description %></h4>
-      <% if @address.photo.present? do
+      <% if @address.photo.attached? %>
         <%= cl_image_tag @address.photo.key, height: 300, width: 400 %>
       <% else %>
         <img src="https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-6.png" alt="">
-      end %>
+      <%end %>
       <%#= link_to "My addresses", addresses_path %>
 
     <div class="show-buttons">
