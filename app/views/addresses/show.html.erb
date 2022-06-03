@@ -1,8 +1,3 @@
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-
 <div class="container-show-address">
   <div>
     <div data-controller="map"
@@ -44,11 +39,11 @@
     </div>
 
       <h4 class="description"><strong>Description: </strong><%= @address.description %></h4>
-      <% if @address.photo.present? do
+      <%# if @address.photo.present? do
         <%= cl_image_tag @address.photo.key, height: 300, width: 400 %>
-      <% else %>
-        <img src="https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-6.png" alt="">
-      end %>
+      <%# else %>
+        <%# <img src="https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-6.png" alt="no image"> %>
+      <%# end %>
       <%#= link_to "My addresses", addresses_path %>
 
     <div class="show-buttons">
