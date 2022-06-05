@@ -1,15 +1,15 @@
 
 body {
-  margin: 0 0 55px 0;
+  margin: 0 0 68px 0;
 }
 
 .nav {
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 55px;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-  background-color: #ffffff;
+  height: 68px;
+  // box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  background-color: #042330;
   display: flex;
   overflow-x: auto;
 }
@@ -31,6 +31,17 @@ body {
   transition: background-color 0.1s ease-in-out;
 }
 
+.nav__link i {
+  color: white;
+}
+
+.nav__link span {
+  color: white;
+  // font-family: 'Berlin Bold Bold';
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
 .nav__link:hover {
   background-color: #eeeeee;
 }
@@ -39,9 +50,11 @@ body {
   color: #3989bb;
 }
 
-.nav__icon {
-  font-size: 18px;
-}
+// .nav__icon {
+//   font-size: 18px;
+// }
+
+
 
 
 
