@@ -4,7 +4,8 @@
 
 <div class="container-address-index" data-controller="dropdown">
 
-    <h1 class="my_addresses"><strong>My addresses</strong></h1>
+    <h1 class="my-addresses">My addresses</h1>
+    <div class="green-line"></div>
 
     <div class="add-new-address-1" >
       <i class="material-symbols-outlined">add_circle</i>
@@ -13,21 +14,25 @@
 
     <% @addresses.each do|address| %>
       <div class="info-card">
-        <span class="material-symbols-outlined">apartment</span>
+        <div class="house-icon">
+          <i class="material-symbols-outlined">apartment</i>
+        </div>
 
-        <div>
-          <a class="address-link" href="/addresses/<%=address.id%>" ><strong><%= address.name %></strong></a>
+        <div class="address-link">
+          <a href="/addresses/<%=address.id%>" ><strong><%= address.name %></strong></a>
           <p><%= address.address %></p>
         </div>
 
         <div class="dropdown">
-          <i data-action="click->dropdown#toggle" class="material-symbols-outlined" type="button" id="<%= address.id %>">more_vert</i>
-        </div>
+          <div class="dropdown-1">
+            <span data-action="click->dropdown#toggle" class="material-symbols-outlined" type="button" id="<%= address.id %>">more_vert</span>
+          </div>
 
-        <div class="dropdownmenu" id="menu-<%= address.id %>">
-          <a class="dropdown-item" href="#">Share</a>
-          <a class="dropdown-item" href="#">Edit</a>
-          <a class="dropdown-item" href="#">Delete</a>
+          <div class="dropdownmenu" id="menu-<%= address.id %>">
+            <a class="dropdown-item" href="#">Share</a>
+            <a class="dropdown-item" href="#">Edit</a>
+            <a class="dropdown-item" href="#">Delete</a>
+          </div>
         </div>
       </div>
 

@@ -5,115 +5,121 @@
   align-items: left;
   justify-content: center;
   padding: 0;
-
 }
 
-.my_addresses {
-  border-bottom: solid 1px black;
+.my-addresses {
+  // border-bottom: solid 1px black;
+  color: #002F54;
+  font-family: 'Berlin Bold Bold';
+  letter-spacing: 1px;
   width: 100%;
-  padding: 10px 0;
+  padding: 10px 0 0 15px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  font-size: 32px;
+  margin: 0;
 }
 
-.add-new-address {
-  // display: flex;
-  // flex-direction: column;
+.green-line {
+  width: 75px;
+  height: 4px;
+  background-color: #2CE080;
+  margin: 5px 0 10px 15px;
 }
 
 .add-new-address-1  {
   width: 100%;
+  color: #002F54;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid black;
-  padding: 0 15px;
-  margin-bottom: 10px;
+  border-bottom: 1px solid #B5B5B5;
+  // box-shadow: 0px 0px 8px 2px #000000;
+  padding: 15px 0 10px 25px;
 }
 
 .add-new-address-1 a {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: space-around;
-  padding: 10px;
-  color: black;
-}
-
-.card-address {
-  overflow: hidden;
-  height: 60px;
-  width: 100%;
-  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  // display: flex;
-  // align-items: center;
-  margin-bottom: 20px;
-  border-bottom: 1px solid black;
-}
-
-.card-address span {
-  height: 60px;
-  width: 60px;
-  object-fit: cover;
-  // padding-left: 20px;
-}
-
-.card-address-info {
-
-}
-
-h3 {
-  margin: 0;
+  padding-left: 15px;
+  color: #002F54;
   font-size: 20px;
-  // padding: 5px;
 }
 
-p {
-  font-size: 12px;
-  color: gray;
-}
-
-
-  .dropdownmenu {
-    right: 0;
-    position: absolute;
-    z-index: 1000;
-    display: none;
-    min-width: 10rem;
-    padding: 0.5rem 0;
-    margin: 0;
-    font-size: 1rem;
-    color: #0E0000;
-    text-align: left;
-    list-style: none;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    border-radius: 2px;
-  }
-
-  .dropdownmenu-visible {
-    display: block;
-  }
-
-  .nav__link--active {
-    color: #009578;
+.info-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  // padding-left: 15px;
+  margin-top: 5px;
+  margin-left: 15px;
+  font-family: 'Berlin Bold Bold';
+  letter-spacing: 1px;
+  width: 330px;
+  height: 65px;
 }
 
 .address-link {
   display: flex;
-  flex-direction: row;
-  align-items: left;
-  width: 330px;
-  text-decoration: none;
-  color: black;
+  flex-direction: column;
+  padding-left: 15px;
+  width: 261px;
 }
 
-// d-flex justify-content-between align-items-left
-//
-.info-card {
-  display: flex;
-  padding-left: 15px;
-  margin-top: 5px;
+.address-link a {
+  margin: 0;
+  font-size: 16px;
+  color: #002F54;
+  text-decoration: none;
+}
 
+.address-link p {
+  font-size: 12px;
+  color: #002F54;
+  opacity: 0.7;
+  margin: 0;
+}
+
+.house-icon {
+  background-color: #F1F6F4;
+  height: 46px;
+  width: 44px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-card i {
+  color: #002F54;
+}
+
+.dropdown-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+
+.dropdownmenu {
+  right: 0;
+  position: absolute;
+  z-index: 1000;
+  display: none;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  margin: 0;
+  font-size: 1rem;
+  color: #0E0000;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+}
+
+.dropdownmenu-visible {
+  display: block;
+}
+
+.nav__link--active {
+    color: #009578;
 }

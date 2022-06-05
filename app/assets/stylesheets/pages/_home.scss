@@ -1,9 +1,13 @@
 // Specific CSS for your home-page
 
+body {
+  background-color: white;
+}
+
 .container-homepage {
   height: 540px;
   width: 360px;
-  margin-top: 150px;
+  margin-top: 140px;
   width: 100%;
   align-items: center;
   display: flex;
@@ -19,18 +23,29 @@
 display: flex;
 width: 328px;
 position: absolute;
-bottom: 240px;
+bottom: 260px;
 flex-direction: column;
 display: flex;
-align-items: center;
+align-items: left;
 justify-content: center;
+color: #042330;
+font-family: 'Berlin Bold Bold';
+letter-spacing: 1px;
+}
+
+.container-1 h3 {
+  font-size: 12px;
+}
+.container-1 h1 {
+  font-size: 20px;
+  text-align: left;
 }
 
 .container-2 {
-  height: 200px;
+  // height: 200px;
   display: flex;
   position: absolute;
-  bottom: 30px;
+  bottom: 122px;
   align-items: center;
   justify-content: center;
 }
