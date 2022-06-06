@@ -4,7 +4,7 @@
 
     <%= simple_form_for(@address) do |f| %>
 
-      <div class="container-kind-of-place">
+      <div class="container-kind-of-place" data-controller="input">
 
         <div class="address-up">
           <h4><%= @address.address %></h4>
@@ -16,37 +16,36 @@
         </div>
 
         <div class="container-4-cards">
-          <div class="medium-card">
+          <div class="medium-card" data-action="click->input#house">
             <i class="material-icons-round">home</i>
-            <h3>Home</h3>
+            <h3>House</h3>
           </div>
 
-          <div class="medium-card">
+          <div class="medium-card" data-action="click->input#apartment">
             <i class="material-icons-round">apartment</i>
             <h3>Apartment</h3>
           </div>
 
-          <div class="medium-card">
+          <div class="medium-card" data-action="click->input#office">
             <i class="material-icons-round">domain</i>
             <h3>Office</h3>
           </div>
 
-          <div class="medium-card">
+          <div class="medium-card" data-action="click->input#other">
             <i class="material-icons-round">forest</i>
             <h3>Other</h3>
           </div>
         </div>
 
-
-
         <div class="text-input">
-          <%= f.label :kind_of_place %>
-          <%= f.text_field :kind_of_place %>
+          <%= f.input :kind_of_place,
+            input_html: {data: {input_target: "form"}}
+           %>
         </div>
 
       </div>
 
-      <div class="container-place-in-the-building">
+      <div class="container-place-in-the-building" data-controller="place">
 
         <div class="address-up">
           <h4><%= @address.address %></h4>
@@ -58,34 +57,35 @@
         </div>
 
         <div class="container-4-cards">
-          <div class="medium-card">
+          <div class="medium-card" data-action="click->place#front">
             <i class="material-icons-round">home</i>
-            <h3>Home</h3>
+            <h3>Front house</h3>
           </div>
 
-          <div class="medium-card">
+          <div class="medium-card" data-action="click->place#wing">
             <i class="material-icons-round">apartment</i>
-            <h3>Apartment</h3>
+            <h3>Wing</h3>
           </div>
 
-          <div class="medium-card">
+          <div class="medium-card" data-action="click->place#back">
             <i class="material-icons-round">domain</i>
-            <h3>Office</h3>
+            <h3>Back House</h3>
           </div>
 
-          <div class="medium-card">
+          <div class="medium-card" data-action="click->place#other">
             <i class="material-icons-round">forest</i>
             <h3>Other</h3>
           </div>
         </div>
 
         <div class="text-input">
-          <%= f.label :place_in_building %>
-          <%= f.text_field :place_in_building %>
+          <%= f.input :place_in_building,
+          input_html: {data: {place_target: "form"}}
+          %>
         </div>
       </div>
 
-      <div class="container-floor">
+      <div class="container-floor" data-controller="elevator">
 
         <div class="address-up">
           <h4><%= @address.address %></h4>
@@ -102,12 +102,12 @@
         </div>
 
         <div class="container-2-cards">
-          <div class="medium-card">
+          <div class="medium-card" data-action="click->elevator#present">
             <i class="material-icons-round">home</i>
             <h3>Home</h3>
           </div>
 
-          <div class="medium-card">
+          <div class="medium-card" data-action="click->elevator#stairs">
             <i class="material-icons-round">apartment</i>
             <h3>Apartment</h3>
           </div>
@@ -115,9 +115,11 @@
 
         <div class="elevator-1">
           <%= f.label :elevator, "Elevator" %>
-          <%= f.check_box :elevator %>
+          <%= f.check_box :elevator, data: {elevator_target: "form"} %>
         </div>
       </div>
+
+
 
       <div class="more-description">
 

@@ -18,3 +18,13 @@ application.register("map", MapController)
 
 import ClipboardController from "./clipboard_controller.js"
 application.register("clipboard", ClipboardController)
+
+import InputController from "./input_controller.js"
+application.register("input", InputController)
+
+import PlaceController from "./place_controller.js"
+application.register("place", PlaceController)
+
+import ElevatorController from "./elevator_controller.js"
+application.register("elevator", ElevatorController)
+
