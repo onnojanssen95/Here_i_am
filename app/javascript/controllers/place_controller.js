@@ -10,15 +10,17 @@ export default class extends Controller {
 
   front(event) {
     this.formTarget.value = "front house";
-    document.getElementById('id').scrollIntoView();
+    document.querySelector('.container-floor').scrollIntoView();
   }
 
   wing(event) {
     this.formTarget.value = "wing";
+    document.querySelector('.container-floor').scrollIntoView();
   }
 
   back(event) {
     this.formTarget.value = "back house";
+    document.querySelector('.container-floor').scrollIntoView();  
   }
 
 

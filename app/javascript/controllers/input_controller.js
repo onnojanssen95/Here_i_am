@@ -15,13 +15,16 @@ export default class extends Controller {
 
   apartment(event) {
     this.formTarget.value = "apartment";
+    document.querySelector('.container-place-in-the-building').scrollIntoView();
   }
 
   office(event) {
     this.formTarget.value = "office";
+    document.querySelector('.container-place-in-the-building').scrollIntoView();
   }
 
   other(event) {
     this.formTarget.value = "other";
+    document.querySelector('.container-place-in-the-building').scrollIntoView();
   }
 }
