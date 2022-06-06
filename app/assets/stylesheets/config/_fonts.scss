@@ -20,14 +20,15 @@ $headers-font: "Nunito", "Helvetica", "sans-serif";
   font-family: 'Berlin Regular';
   font-style: normal;
   font-weight: normal;
-  src: local('Berlin Regular'), url('./app/assets/fonts/Berlin.woff') format('woff');
+  src: url('./app/assets/fonts/Berlin.woff') format('woff');
   }
+  $my-font: "Berlin Regular";
 
   @font-face {
   font-family: 'Berlin Italic';
   font-style: normal;
   font-weight: normal;
-  src: local('Berlin Italic'), url('/assets/fonts/Berlin - Italic.woff') format('woff');
+  src: url('./app/assets/fonts/Berlin - Italic.woff') format('woff');
   }
 
 
@@ -35,12 +36,12 @@ $headers-font: "Nunito", "Helvetica", "sans-serif";
   font-family: 'Berlin XBold XBold';
   font-style: normal;
   font-weight: normal;
-  src: local('Berlin XBold XBold'), url('./assets/fonts/Berlin X-Bold.woff') format('woff');
+  src: url('./app/assets/fonts/Berlin X-Bold.woff') format('woff');
   }
 
   @font-face {
   font-family: 'Berlin Bold Bold';
   font-style: normal;
   font-weight: normal;
-  src: local('Berlin Bold Bold'), url('./assets/fonts/Berlin Bold.woff') format('woff');
+  src: url('./app/assets/fonts/Berlin-Bold.woff') format('woff');
   }
