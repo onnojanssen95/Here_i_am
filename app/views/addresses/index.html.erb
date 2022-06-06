@@ -28,8 +28,8 @@
 
           <div class="dropdownmenu" id="menu-<%= address.id %>">
             <a class="dropdown-item" href="#">Share</a>
-            <a class="dropdown-item" href="#">Edit</a>
-            <a class="dropdown-item" href="#">Delete</a>
+            <%= link_to "Edit", edit_address_path(address), class: "dropdown-item" %>
+            <%= link_to "Delete", address_path(address), class: "dropdown-item", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
           </div>
         </div>
       </div>
@@ -38,3 +38,5 @@
     <% end %>
 
 </div>
+
+            <%# <a class="dropdown-item" href "#"edit>Edit</a> %>
