@@ -1,47 +1,151 @@
-<h1>Edit the field you want</h1>
- <%= simple_form_for(@address) do |f| %>
+<div class="container-new-address">
 
-  <div class="text-input">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
+  <div class="create-form">
 
-    <%= f.input :address,
-input_html: {data: {address_autocomplete_target: "address"}, class: "d-none" },
-wrapper_html: {data: {controller: "address-autocomplete", address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}}
-%>
-<br><br><br>
-  <div class="text-input">
-    <%= f.label :kind_of_place %>
-    <%= f.text_field :kind_of_place %>
-  </div>
+    <%= simple_form_for(@address) do |f| %>
 
-  <div class="text-input">
-    <%= f.label :place_in_building %>
-    <%= f.text_field :place_in_building %>
-  </div>
+      <div class="container-kind-of-place">
 
-  <div class="text-input">
-    <%= f.label :floor %>
-    <%= f.text_field :floor %>
-  </div>
+        <div class="address-up">
+          <h4><%= @address.address %></h4>
+        </div>
 
-  <div class="elevator-1">
-    <%= f.label :elevator, "Elevator" %>
-    <%= f.check_box :elevator %>
-  </div>
+        <div class="container-kind-of-place-1">
+          <h2>What kind of place is this?</h2>
+          <h5>Help us find your location faster.</h5>
+        </div>
 
-  <div class="text-input">
-    <%= f.label :description %>
-    <%= f.text_field :description %>
-  </div>
+        <div class="container-4-cards">
+          <div class="medium-card">
+            <i class="material-icons-round">home</i>
+            <h3>Home</h3>
+          </div>
 
-  <div>
-    <%= f.label :image %>
-    <%= f.input :photo, as: :file %>
-  </div>
+          <div class="medium-card">
+            <i class="material-icons-round">apartment</i>
+            <h3>Apartment</h3>
+          </div>
 
-  <div>
-    <%= f.submit %>
+          <div class="medium-card">
+            <i class="material-icons-round">domain</i>
+            <h3>Office</h3>
+          </div>
+
+          <div class="medium-card">
+            <i class="material-icons-round">forest</i>
+            <h3>Other</h3>
+          </div>
+        </div>
+
+
+
+        <div class="text-input">
+          <%= f.label :kind_of_place %>
+          <%= f.text_field :kind_of_place %>
+        </div>
+
+      </div>
+
+      <div class="container-place-in-the-building">
+
+        <div class="address-up">
+          <h4><%= @address.address %></h4>
+        </div>
+
+        <div class="container-kind-of-place-1">
+          <h2>Where is the apartment located?</h2>
+          <h5>Help us find your location faster.</h5>
+        </div>
+
+        <div class="container-4-cards">
+          <div class="medium-card">
+            <i class="material-icons-round">home</i>
+            <h3>Home</h3>
+          </div>
+
+          <div class="medium-card">
+            <i class="material-icons-round">apartment</i>
+            <h3>Apartment</h3>
+          </div>
+
+          <div class="medium-card">
+            <i class="material-icons-round">domain</i>
+            <h3>Office</h3>
+          </div>
+
+          <div class="medium-card">
+            <i class="material-icons-round">forest</i>
+            <h3>Other</h3>
+          </div>
+        </div>
+
+        <div class="text-input">
+          <%= f.label :place_in_building %>
+          <%= f.text_field :place_in_building %>
+        </div>
+      </div>
+
+      <div class="container-floor">
+
+        <div class="address-up">
+          <h4><%= @address.address %></h4>
+        </div>
+
+        <div class="container-kind-of-place-1">
+          <h2>On which floor?</h2>
+          <h5>Help us find your location faster.</h5>
+        </div>
+
+        <div class="floor-input">
+          <%= f.label :floor %>
+          <%= f.text_field :floor %>
+        </div>
+
+        <div class="container-2-cards">
+          <div class="medium-card">
+            <i class="material-icons-round">home</i>
+            <h3>Home</h3>
+          </div>
+
+          <div class="medium-card">
+            <i class="material-icons-round">apartment</i>
+            <h3>Apartment</h3>
+          </div>
+        </div>
+
+        <div class="elevator-1">
+          <%= f.label :elevator, "Elevator" %>
+          <%= f.check_box :elevator %>
+        </div>
+      </div>
+
+      <div class="more-description">
+
+        <div class="address-up">
+          <h4><%= @address.address %></h4>
+        </div>
+
+        <div class="container-kind-of-place-1">
+          <h2>Would you like to add something?</h2>
+          <h5>Help us find your location faster.</h5>
+        </div>
+
+        <div class="text-input-more-description">
+          <%= f.label :description %>
+          <%= f.text_field :description %>
+        </div>
+      </div>
+
+        <br><br><br><br>
+
+        <div>
+          <%= f.label :image %>
+          <%= f.input :photo, as: :file %>
+        </div>
+
+        <div>
+          <%= f.submit %>
+        </div>
+    <% end %>
   </div>
-<% end %>
+</div>
