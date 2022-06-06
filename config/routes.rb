@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   resources :addresses do
     resources :pin_table, only: [:new, :index, :create, :destroy]
   end
+  get"/settings", to: "pages#settings"
+  delete"/setting", to: "settings#sessions_destroy"
 end
