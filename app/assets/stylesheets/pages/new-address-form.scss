@@ -36,6 +36,14 @@
   justify-content: space-evenly;
 }
 
+.container-4-cards img {
+  height: 85px;
+}
+
+.container-4-cards h3 {
+  padding-top: 5px;
+}
+
 .container-2-cards {
   margin-top: 50px;
   height: 165px;
@@ -123,3 +131,4 @@
   flex-direction: column;
   height: 50px;
 }
+

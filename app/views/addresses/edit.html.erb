@@ -58,22 +58,22 @@
 
         <div class="container-4-cards">
           <div class="medium-card" data-action="click->place#front">
-            <i class="material-icons-round">home</i>
+            <img src="<%= asset_url('fronth.png') %>">
             <h3>Front house</h3>
           </div>
 
           <div class="medium-card" data-action="click->place#wing">
-            <i class="material-icons-round">apartment</i>
+            <img src="<%= asset_url('wing.png') %>">
             <h3>Wing</h3>
           </div>
 
           <div class="medium-card" data-action="click->place#back">
-            <i class="material-icons-round">domain</i>
+            <img src="<%= asset_url('back.png') %>">
             <h3>Back House</h3>
           </div>
 
           <div class="medium-card" data-action="click->place#other">
-            <i class="material-icons-round">forest</i>
+            <img src="<%= asset_url('noneh.png') %>">
             <h3>Other</h3>
           </div>
         </div>
@@ -103,13 +103,13 @@
 
         <div class="container-2-cards">
           <div class="medium-card" data-action="click->elevator#present">
-            <i class="material-icons-round">home</i>
-            <h3>Home</h3>
+            <i class="material-icons-round">elevator</i>
+            <h3>Elevator</h3>
           </div>
 
           <div class="medium-card" data-action="click->elevator#stairs">
-            <i class="material-icons-round">apartment</i>
-            <h3>Apartment</h3>
+            <i class="material-icons-round">stairs</i>
+            <h3>Only stairs</h3>
           </div>
         </div>
 
@@ -118,8 +118,6 @@
           <%= f.check_box :elevator, data: {elevator_target: "form"} %>
         </div>
       </div>
-
-
 
       <div class="more-description">
 
@@ -133,8 +131,7 @@
         </div>
 
         <div class="text-input-more-description">
-          <%= f.label :description %>
-          <%= f.text_field :description %>
+          <%= f.input :description %>
         </div>
       </div>
 
