@@ -1,0 +1,85 @@
+.big-container-new-address {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+.container-new-address {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 360px;
+  height: 760px;
+}
+
+.create-form {
+  width: 330px;
+  margin: 15px;
+
+}
+
+.text-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.elevator-1 {
+  padding: 20px 0;
+}
+
+.container-4-cards {
+  height: 330px;
+  width: 330px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.container-2-cards {
+  height: 165px;
+  width: 330px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.medium-card {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #F1F6F4;
+  height: 155px;
+  width: 155px;
+  border-radius: 8px;
+  margin: 0;
+}
+
+.medium-card i {
+  display: flex;
+  font-size: 85px;
+  color: #002F54;
+
+}
+
+.medium-card h3 {
+  display: flex;
+  font-size: 16px;
+  color: #002F54;
+}
+
+.container-kind-of-place-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-kind-of-place-1 h2 {
+  font-size: 32px;
+  text-align: center;
+}
+
+.container-kind-of-place-1 h5 {
+  font-size: 16px;
+}
