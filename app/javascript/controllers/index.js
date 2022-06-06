@@ -15,3 +15,6 @@ application.register("hello", HelloController)
 
 import MapController from "./map_controller.js"
 application.register("map", MapController)
+
+import ClipboardController from "./clipboard_controller.js"
+application.register("clipboard", ClipboardController)
