@@ -6,9 +6,8 @@
 
 .btn {
   text-decoration: none;
-  // padding: 20px 50px;
   position: relative;
-  margin: 8px;
+  // margin: 8px;
   width: 330px;
 
 }
@@ -16,11 +15,10 @@
 .btn-1 {
   background-color: #2CE080;
   color: #002F54;
-  // font-weight: bold;
   border-radius: 4px;
   font-size: 20px;
-  font-family: 'Berlin Bold Bold';
-  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  font-weight: bold ;
+  font-family: 'Work Sans';
 }
 
 .btn-1:hover {
@@ -36,8 +34,6 @@
   border: 1px solid #2CE080;
   font-size: 20px;
   bottom: 0px;
-  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
-
 }
 
 .btn-2:hover {
@@ -55,5 +51,6 @@
   text-decoration: none;
 
   // box-shadow: 0 0 15px rgba(0,0,0,0.2);
-
 }
+
+
