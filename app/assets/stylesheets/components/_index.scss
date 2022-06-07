@@ -4,4 +4,7 @@
 @import "avatar";
 @import "buttons";
 @import "form_legend_clear";
-@import "navbar"
+@import "navbar";
+@import "map";
+curl https://raw.githubusercontent.com/lewagon/karr-images/master/mapbox-marker-icon-green.svg > app/assets/images/logo.png
+curl https://raw.githubusercontent.com/lewagon/karr-images/master/mapbox-marker-icon-red.svg > app/assets/images/logo.png
