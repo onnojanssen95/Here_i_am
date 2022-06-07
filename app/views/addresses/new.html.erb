@@ -2,12 +2,10 @@
 <h2 class="type-address my-5 text-center">Please type your address</h2>
   <%= simple_form_for(@address) do |f| %>
 
-    <%# <div class="input-autocomplete"> %>
       <%= f.input :address,
       input_html: {data: {address_autocomplete_target: "address"}, class: "d-none" }, label: false,
       wrapper_html: {data: {controller: "address-autocomplete", address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}}
       %>
-    <%# </div> %>
 
   <p class="use-location"> Use location</p>
 
@@ -17,7 +15,6 @@
       <% f.label :name %>
       <%= f.text_field :name %>
       <button class="btn btn-1 add-address-btn">next</button>
-    <%# <a><%= link_to "next", edit_address_path, class: "btn btn-1"</a> %>
     </div>
   <% end %>
 </div>
