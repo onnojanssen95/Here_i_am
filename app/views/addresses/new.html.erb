@@ -1,13 +1,16 @@
-<div class="container">
+<div class="container" data-controller="geolocation" data-geolocation-api-key-value="<%= ENV["MAPBOX_API_KEY"]%>">
+
 <h2 class="type-address my-5 text-center">Please type your address</h2>
   <%= simple_form_for(@address) do |f| %>
 
       <%= f.input :address,
-      input_html: {data: {address_autocomplete_target: "address"}, class: "d-none" }, label: false,
-      wrapper_html: {data: {controller: "address-autocomplete", address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}}
+      input_html: {data: {geolocation_target: "address" }, class: "d-none" }, label: false
       %>
-
-  <p class="use-location"> Use location</p>
+  <div>
+    <%#= link_to "use-location", new_address_path, data:{geolocation_target:"link", action:"click->gelocation#track"
+    } %>
+    <p class="use-location" data-geolocation-target="link" data-action="click->geolocation#track">Use location</p>
+  </div>
 
     <h2 class="my-5 give-name">Give your address a name</h2>
 

@@ -1,0 +1,41 @@
+<div class="container">
+<h2 class="type-address my-5 text-center">Please type your address</h2>
+  <%= simple_form_for(@address) do |f| %>
+
+      <%= f.input :address,
+      input_html: {data: {address_autocomplete_target: "address"}, class: "d-none" }, label: false,
+      wrapper_html: {data: {controller: "address-autocomplete", address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}}
+      %>
+
+  <p class="use-location"> Use location</p>
+
+  <% const map = new mapboxgl.Map({
+      container: 'map', // container ID
+      style: 'mapbox://styles/mapbox/streets-v11', // style URL
+      center: [-96, 37.8], // starting position
+      zoom: 3 // starting zoom
+      }); %>
+
+  <%# Add geolocate control to the map. %>
+    <% map.addControl(
+      new mapboxgl.GeolocateControl({
+        positionOptions: {
+          enableHighAccuracy: true
+          },
+
+        # When active the map will receive updates to the device's location as it changes.
+        trackUserLocation: true,
+        # Draw an arrow next to the location dot to indicate which direction the device is heading.
+        showUserHeading: true
+        })
+        ); %>
+
+    <h2 class="my-5 give-name">Give your address a name</h2>
+
+    <div class="container-address-name">
+      <% f.label :name %>
+      <%= f.text_field :name %>
+      <button class="btn btn-1 add-address-btn">next</button>
+    </div>
+  <% end %>
+</div>
