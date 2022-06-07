@@ -4,7 +4,7 @@ import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder"
 
 // Connects to data-controller="geolocation"
 export default class extends Controller {
-  static targets=["link", "address"]
+  static targets=["link", "address", "input"]
   static values = {
     coordinates: Object,
     apiKey: String
@@ -30,7 +30,7 @@ export default class extends Controller {
       types: "country,region,place,postcode,locality,neighborhood,address",
       reverseGeocode: true
     })
-    this.geocoder.addTo(this.element)
+    this.geocoder.addTo(this.inputTarget)
     this.geocoder.on("result", event => this.#setInputValue(event))
     this.geocoder.on("clear", () => this.#clearInputValue())
   }
@@ -45,7 +45,7 @@ export default class extends Controller {
   track(e) {
     e.preventDefault()
     document.querySelector(".mapboxgl-ctrl-geocoder--input").value = `${this.long}, ${this.lat}`
-    
+
     // this.addressTarget.value = `${this.long}, ${this.lat}`
 
     // this.geocoder.query(`${this.long}, ${this.lat}`)

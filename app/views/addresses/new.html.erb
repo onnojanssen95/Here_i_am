@@ -2,6 +2,7 @@
 
 <h2 class="type-address my-5 text-center">Please type your address</h2>
   <%= simple_form_for(@address) do |f| %>
+      <div data-geolocation-target="input"></div>
 
       <%= f.input :address,
       input_html: {data: {geolocation_target: "address" }, class: "d-none" }, label: false
