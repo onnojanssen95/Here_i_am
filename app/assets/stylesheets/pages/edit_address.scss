@@ -119,6 +119,10 @@
   height: 760px;
 }
 
+.more-description {
+  height: 760px;
+}
+
 .floor-input {
   padding: 45px 0 10px 0;
   display: flex;
@@ -128,5 +132,10 @@
 .text-input-more-description {
   display: flex;
   flex-direction: column;
-  height: 50px;
+  align-items: flex-end;
+  // height: 50px;
+}
+
+.input-description {
+  width: 100%;
 }

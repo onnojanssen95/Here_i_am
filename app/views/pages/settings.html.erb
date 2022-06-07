@@ -1,19 +1,22 @@
-<div>
-  <h1 class="title"> settings</h1>
+<div class= container1 >
+
+  <div class = "flexbox">
+      <h1 class="title"> my profile</h1>
+    <div class= usersinfo>
+      <h3 class="btn4">user name: <%= current_user.user_name %></h3>
+
+
+      <h3 class="btn4">email address: <%= current_user.email %></h3>
+    </div>
+    <div>
+      <%= link_to "sign out", destroy_user_session_path, data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to sign out?"}, class:"btn5"%>
+    </div>
+
+
+
+    <div>
+      <%= link_to "about here i am", root_path, class:"btn5"%>
+    </div>
+
+  </div>
 </div>
-
-<%# <h2 class ="btn-4" > %>
-<div>
-  <%= link_to "sign out", destroy_user_session_path, data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to sign out?"}, class:"btn-4"%>
-</div>
-
-<br>
-
-<div>
-  <%= link_to "about here i am", root_path, class:"btn-4"%>
-</div>
-
-
-
-
-  <h2 class="btn-4">about here i am</h2>
