@@ -17,7 +17,7 @@ export default class extends Controller {
   }
   #addMarkersToMap() {
     this.markersValue.forEach((marker) => {
-      new mapboxgl.Marker()
+      new mapboxgl.Marker({draggable: true})
       .setLngLat([marker.lng, marker.lat])
       .addTo(this.map);
     })
