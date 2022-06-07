@@ -30,3 +30,6 @@ application.register("elevator", ElevatorController)
 
 import DescriptionController from "./description_controller.js"
 application.register("description", DescriptionController)
+
+import MappinsController from "./mappins_controller.js"
+application.register("mappins", MappinsController)

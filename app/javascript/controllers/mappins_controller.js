@@ -9,6 +9,6 @@ export default class extends Controller {
   // }
 
   next(event) {
-    document.querySelector('.container-map').scrollIntoView();
+    document.querySelector('.add-picture').scrollIntoView();
   }
 }
