@@ -36,7 +36,7 @@ class AddressesController < ApplicationController
       @address = Address.new(address_params)
       @address.user = current_user
       if @address.save
-        redirect_to address_path(@address)
+        redirect_to edit_address_path(@address)
       else
         render :new
       end
