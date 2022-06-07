@@ -49,16 +49,10 @@ class AddressesController < ApplicationController
     @address = Address.find(params[:id])
 
     @markers = [{
-
       lat: @address.geocode[0],
       lng: @address.geocode[1],
       # info_window: render_to_string(partial: "info_window", locals: { address: address })
-      }, {
-
-      lat: @address.geocode[0] + 0.005,
-      lng: @address.geocode[1] + 0.005,
-        # info_window: render_to_string(partial: "info_window", locals: { address: address })
-    }
+      }
   ]
   end
 
