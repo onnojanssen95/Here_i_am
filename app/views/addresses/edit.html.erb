@@ -119,7 +119,7 @@
         </div>
       </div>
 
-      <div class="more-description">
+      <div class="more-description" data-controller="description">
 
         <div class="address-up">
           <h4><%= @address.address %></h4>
@@ -131,11 +131,36 @@
         </div>
 
         <div class="text-input-more-description">
-          <%= f.input :description %>
+
+          <div class="input-description">
+            <%= f.input :description %>
+          </div>
+
+          <div class="next-button" data-action="click->description#next"><h5>Next</h5></div>
         </div>
+
+        <div >
+
+        </div>
+
       </div>
 
-        <br><br><br><br>
+        <div class="contailner-map">
+
+          <div class="address-up">
+            <h4><%= @address.address %></h4>
+          </div>
+
+          <div data-controller="map"
+            id="map"
+            data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
+            data-map-markers-value="<%= @markers.to_json %>"
+            style="width: 100%; height: 600px;">
+        </div>
+
+
+
+      </div>
 
         <div>
           <%= f.label :image %>

@@ -28,3 +28,5 @@ application.register("place", PlaceController)
 import ElevatorController from "./elevator_controller.js"
 application.register("elevator", ElevatorController)
 
+import DescriptionController from "./description_controller.js"
+application.register("description", DescriptionController)
