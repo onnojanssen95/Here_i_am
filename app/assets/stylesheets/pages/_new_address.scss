@@ -1,0 +1,111 @@
+.type-address {
+  width: 312px;
+  height: 72px;
+
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  /* or 111% */
+
+  text-align: center;
+
+  color: #002F54;
+}
+
+// .input-autocomplete {
+//   position: absolute;
+//   width: 312px;
+//   height: 45px;
+//   left: 23px;
+//   top: 178px;
+// }
+
+// .use-location {
+//   position: absolute;
+//   width: 312px;
+//   height: 33px;
+//   left: 47px;
+//   top: 280px;
+
+//   font-family: 'Work Sans';
+//   font-style: normal;
+//   font-weight: 500;
+//   font-size: 16px;
+//   line-height: 19px;
+//   /* identical to box height */
+
+//   letter-spacing: -0.3px;
+
+//   /* darkgrey */
+
+//   color: #787878;
+// }
+
+.give-name {
+  width: 312px;
+  height: 72px;
+
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  /* or 111% */
+
+  text-align: center;
+
+  color: #002F54;
+}
+
+// .container-address-name {
+//   position: absolute;
+//   left: 6.5%;
+//   right: 27.24%;
+//   top: 55.89%;
+
+//   font-family: 'Work Sans';
+//   font-style: normal;
+//   font-weight: 500;
+//   font-size: 16px;
+//   line-height: 19px;
+//   /* identical to box height */
+
+//   letter-spacing: -0.3px;
+
+//   color: #838282;
+// }
+
+.mapboxgl-ctrl-geocoder--input {
+  margin: 0 auto;
+  width: 300px;
+  border-radius: 4px;
+  height: 44px;
+}
+
+.mapboxgl-ctrl-geocoder {
+  max-width: 350px;
+  width: 100%;
+  border: none !important;
+  box-shadow: none;
+  background-color: transparent;
+  margin: 0 auto;
+}
+
+.mapboxgl-ctrl-geocoder--pin-right {
+  display: none;
+}
+
+#address_name {
+  width: 300px;
+  margin-left: 18px;
+  margin-bottom: 18px;
+  border-radius: 4px;
+  height: 44px;
+}
+
+.add-address-btn {
+  width: 300px !important;
+  margin-left: 18px;
+}
