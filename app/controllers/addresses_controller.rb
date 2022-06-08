@@ -72,6 +72,6 @@ class AddressesController < ApplicationController
   private
 
   def address_params
-    params.require(:address).permit(:name, :address, :kind_of_place, :place_in_building, :floor, :elevator, :description, :photo)
+    params.require(:address).permit(:name, :address, :kind_of_place, :place_in_building, :floor, :elevator, :description, photos: [])
   end
 end

@@ -7,8 +7,14 @@ import { application } from "./application"
 import AddressAutocompleteController from "./address_autocomplete_controller.js"
 application.register("address-autocomplete", AddressAutocompleteController)
 
+import CanvasController from "./canvas_controller.js"
+application.register("canvas", CanvasController)
+
 import ClipboardController from "./clipboard_controller.js"
 application.register("clipboard", ClipboardController)
+
+import DescriptionController from "./description_controller.js"
+application.register("description", DescriptionController)
 
 import DropdownController from "./dropdown_controller.js"
 application.register("dropdown", DropdownController)
@@ -28,10 +34,9 @@ application.register("input", InputController)
 import MapController from "./map_controller.js"
 application.register("map", MapController)
 
-import PlaceController from "./place_controller.js"
-application.register("place", PlaceController)
-import DescriptionController from "./description_controller.js"
-application.register("description", DescriptionController)
-
 import MappinsController from "./mappins_controller.js"
 application.register("mappins", MappinsController)
+
+import PlaceController from "./place_controller.js"
+application.register("place", PlaceController)
+
