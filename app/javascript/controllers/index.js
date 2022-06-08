@@ -35,3 +35,6 @@ application.register("description", DescriptionController)
 
 import MappinsController from "./mappins_controller.js"
 application.register("mappins", MappinsController)
+
+import InputotherController from "./inputother_controller.js"
+application.register("inputother", InputotherController)

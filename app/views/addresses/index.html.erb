@@ -26,12 +26,7 @@
             <span data-action="click->dropdown#toggle" class="material-symbols-outlined" type="button" id="<%= address.id %>">more_vert</span>
           </div>
 
-
-
-              <%# <a  href="#">Share </a> %>
-
-
-          <div class="dropdownmenu" id="menu-<%= address.id %>">
+            <div class="dropdownmenu" id="menu-<%= address.id %>">
 
             <div data-controller="clipboard" data-clipboard-feedback-text-value="Copied!">
               <input class="form-control hide-input" data-clipboard-target="input" type="text" value="<%= address_url(address) %>" readonly>
