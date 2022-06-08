@@ -72,6 +72,7 @@ export default class extends Controller {
         // console.log(`A click event has occurred at ${e.lngLat.lng}`);
         const customMarker = document.createElement("div")
         customMarker.className = "marker"
+
         customMarker.style.backgroundImage = `url('/assets/mapbox-marker-icon-20px-red.png')`
         customMarker.style.backgroundSize = "initial"
         customMarker.style.backgroundRepeat = 'no-repeat'
@@ -83,7 +84,9 @@ export default class extends Controller {
         // console.log(this.mapBoxMarkers.length)
         if(this.mapBoxMarkers.length > 1){
           // console.log(this.mapBoxMarkers[this.mapBoxMarkers.length - 1]._element)
+          // this.mapBoxMarkers[this.mapBoxMarkers.length - 1]._element.style.backgroundImage = `url('/assets/greyfoldedpin.png')`
           this.mapBoxMarkers[this.mapBoxMarkers.length - 1]._element.style.backgroundImage = `url('/assets/mapbox-marker-icon-20px-purple.png')`
+
         }
         this.mapBoxMarkers.push(newMarker)
         let coordsArr = this.mapBoxMarkers.map(item => [item.getLngLat().lng, item.getLngLat().lat])
