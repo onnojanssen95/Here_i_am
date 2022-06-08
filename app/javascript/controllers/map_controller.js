@@ -40,7 +40,7 @@ export default class extends Controller {
 
   #drawMarkerLines(){
     // let coordsArr =this.mapBoxMarkers.map(item => [item.lng, item.lat])
-    console.log(this.mapBoxMarkers)
+    // console.log(this.mapBoxMarkers)
     let coordsArr = this.mapBoxMarkers.map(item => [item.getLngLat().lng, item.getLngLat().lat])
     // console.log(coordsArr)
     this.map.on('load', () => {
@@ -69,10 +69,22 @@ export default class extends Controller {
         }
       });
       this.map.on('click', (e) => {
-        console.log(`A click event has occurred at ${e.lngLat.lng}`);
-        const newMarker = new mapboxgl.Marker({draggable: true})
+        // console.log(`A click event has occurred at ${e.lngLat.lng}`);
+        const customMarker = document.createElement("div")
+        customMarker.className = "marker"
+        customMarker.style.backgroundImage = `url('/assets/mapbox-marker-icon-20px-red.png')`
+        customMarker.style.backgroundSize = "initial"
+        customMarker.style.backgroundRepeat = 'no-repeat'
+        customMarker.style.width = "25px"
+        customMarker.style.height = "25px"
+        const newMarker = new mapboxgl.Marker(customMarker, {draggable: true})
         .setLngLat([e.lngLat.lng, e.lngLat.lat])
         .addTo(this.map)
+        // console.log(this.mapBoxMarkers.length)
+        if(this.mapBoxMarkers.length > 1){
+          // console.log(this.mapBoxMarkers[this.mapBoxMarkers.length - 1]._element)
+          this.mapBoxMarkers[this.mapBoxMarkers.length - 1]._element.style.backgroundImage = `url('/assets/mapbox-marker-icon-20px-purple.png')`
+        }
         this.mapBoxMarkers.push(newMarker)
         let coordsArr = this.mapBoxMarkers.map(item => [item.getLngLat().lng, item.getLngLat().lat])
         this.#redrawPath(coordsArr)
@@ -87,7 +99,7 @@ export default class extends Controller {
   }
   #redrawPath(coords){
     // console.log('test')
-    console.log(coords)
+    // console.log(coords)
     this.map.getSource('route').setData(
       {
         "type": "Feature",
