@@ -40,10 +40,5 @@ application.register("mappins", MappinsController)
 import PlaceController from "./place_controller.js"
 application.register("place", PlaceController)
 
-
-import MappinsController from "./mappins_controller.js"
-application.register("mappins", MappinsController)
-
 import InputotherController from "./inputother_controller.js"
 application.register("inputother", InputotherController)
-
