@@ -24,7 +24,11 @@ export default class extends Controller {
   }
 
   other(event) {
-    this.formTarget.value = "other";
+    const form = document.getElementById("text-input");
+    form.classList.toggle('text-input');
+  }
+
+  next(event) {
     document.querySelector('.container-place-in-the-building').scrollIntoView();
   }
 }
