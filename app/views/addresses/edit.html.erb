@@ -1,6 +1,11 @@
 <div class="container-new-address">
+<%# create a new data controler , canvas  %>  xx
+<%# console log when the controller in rendert %>
+<%# create a data action on the sumbit button that console.logs something else(test) %>
+<%# data target on the canvas element. %>
 
-  <%= simple_form_for(@address) do |f| %>
+<div data-controller="canvas">
+  <%= simple_form_for @address, html: {data: {"action": "submit->canvas#submit"}} do |f| %>
 
     <div class="container-kind-of-place" data-controller="input">
 
@@ -159,16 +164,21 @@
         id="map"
         data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
         data-map-markers-value="<%= @markers.to_json %>"
-        style="width: 100%; height: 560px;">
-      </div>
+        preserveDrawingBuffer="true"
+        style="width: 100%; height: 560px;"> 
 
+      </div>
+      <div onclick="takeScreenshot()" style="float: right:" class="btn-2">take screenshot</div>
       <div class="next-button-1" data-action="click->mappins#next">
         <h5>Next</h5>
       </div>
     </div>
 
-    <div class="add-picture">
 
+
+    <div id="screenshot" data-canvas-target="canvas">
+    </div>
+    <div class="add-picture">
       <div class="address-up">
         <h4><%= @address.address %></h4>
       </div>
@@ -179,13 +189,24 @@
       </div>
 
       <div class="upload-picture">
-        <%= f.input :photo, as: :file %>
+        <%# <%= f.input :photo, as: :file %> %>
+        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
       </div>
-
+<%# , data: {'canvas-target': 'input'}  %>
       <div class="final-input">
         <%= f.submit %>
       </div>
 
     </div>
   <% end %>
+  </div>
 </div>
+
+<script>
+  const takeScreenshot = (event) => {
+    html2canvas(document.querySelector("#map")).then(canvas => {
+      const screenshotContainer = document.getElementById('screenshot')
+      screenshotContainer.appendChild(canvas)
+    });
+  }
+</script>
