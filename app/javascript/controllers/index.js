@@ -32,3 +32,6 @@ import PlaceController from "./place_controller.js"
 application.register("place", PlaceController)
 import DescriptionController from "./description_controller.js"
 application.register("description", DescriptionController)
+
+import MappinsController from "./mappins_controller.js"
+application.register("mappins", MappinsController)
