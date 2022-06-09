@@ -1,7 +1,7 @@
 <div class="container" data-controller="geolocation" data-geolocation-api-key-value="<%= ENV["MAPBOX_API_KEY"]%>">
 
 <h2 class="type-address my-5 text-center">Please type your address</h2>
-  <%= simple_form_for(@address) do |f| %>
+  <%= simple_form_for @address, html: { autocomplete: "off" } do |f| %>
       <div data-geolocation-target="input"></div>
 
       <%= f.input :address,
