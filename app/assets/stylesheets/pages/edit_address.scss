@@ -109,8 +109,13 @@
   height: 760px;
 }
 
-#screenshoot {
+// #screenshoot {
+//   margin-bottom: 100px;
+// }
+
+.container-screenshoot {
   height: 760px;
+  z-index: 1;
 }
 
 .floor-input {
