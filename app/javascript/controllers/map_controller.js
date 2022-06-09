@@ -23,7 +23,7 @@ export default class extends Controller {
     this.markersValue.forEach((marker) => {
       const customMarker = document.createElement("div")
       customMarker.className = "marker"
-      customMarker.style.backgroundImage = `url('https://res.cloudinary.com/dzeqloola/image/upload/v1654765307/HereIAm/imagefiles_location_map_pin_light_green10_mfoiec.png')`
+      customMarker.style.backgroundImage = `url('/assets/green_pin.png')`
       customMarker.style.backgroundSize = "initial"
       customMarker.style.backgroundRepeat = 'no-repeat'
       customMarker.style.backgroundSize = 'contain'
@@ -82,7 +82,7 @@ export default class extends Controller {
         const customMarker = document.createElement("div")
         customMarker.className = "marker"
 
-        customMarker.style.backgroundImage = `url('https://res.cloudinary.com/dzeqloola/image/upload/v1654764562/HereIAm/red_folded_marker_l1y9oh.png')`
+        customMarker.style.backgroundImage = `url('/assets/red_pin.png')`
         customMarker.style.backgroundSize = "initial"
         customMarker.style.backgroundRepeat = 'no-repeat'
         customMarker.style.backgroundSize = 'contain'
@@ -95,7 +95,7 @@ export default class extends Controller {
         if(this.mapBoxMarkers.length > 1){
           // console.log(this.mapBoxMarkers[this.mapBoxMarkers.length - 1]._element)
           // this.mapBoxMarkers[this.mapBoxMarkers.length - 1]._element.style.backgroundImage = `url('/assets/greyfoldedpin.png')`
-          this.mapBoxMarkers[this.mapBoxMarkers.length - 1]._element.style.backgroundImage = `url('https://res.cloudinary.com/dzeqloola/image/upload/v1654764557/HereIAm/greyfoldedpin_dtpnlt.png')`
+          this.mapBoxMarkers[this.mapBoxMarkers.length - 1]._element.style.backgroundImage = `url('/assets/grey_pin.png')`
           this.mapBoxMarkers[this.mapBoxMarkers.length - 1]._element.style.backgroundSize = `contain`
         }
         this.mapBoxMarkers.push(newMarker)
