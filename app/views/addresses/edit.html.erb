@@ -5,7 +5,7 @@
 <%# data target on the canvas element. %>
 
 <div data-controller="canvas">
-  <%= simple_form_for @address, html: {data: {"action": "submit->canvas#submit"}} do |f| %>
+  <%= simple_form_for @address, html: {data: {"action": "submit->canvas#submit"},  autocomplete: "off"} do |f| %>
 
     <div class="container-kind-of-place" data-controller="input">
 
