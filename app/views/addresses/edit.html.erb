@@ -175,7 +175,6 @@
     </div>
 
 
-
     <div id="screenshot" data-canvas-target="canvas">
     </div>
     <div class="add-picture">
@@ -190,9 +189,9 @@
 
       <div class="upload-picture">
         <%# <%= f.input :photo, as: :file %> %>
-        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+        <%= f.input :photos, as: :file, input_html: { multiple: true, data: {'canvas-target': 'input'} } %>
       </div>
-<%# , data: {'canvas-target': 'input'}  %>
+
       <div class="final-input">
         <%= f.submit %>
       </div>

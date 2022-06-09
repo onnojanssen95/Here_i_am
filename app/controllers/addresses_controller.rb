@@ -59,6 +59,7 @@ class AddressesController < ApplicationController
   def update
     @address = Address.find(params[:id])
     @address.update(address_params)
+    # raise
     redirect_to address_path(@address)
   end
 
