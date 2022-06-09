@@ -5,13 +5,12 @@
 
 <div class="container-show-address">
   <div>
-    <div data-controller="map"
-      id="map"
-      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
-      data-map-markers-value="<%= @markers.to_json %>"
-      style="width: 100%; height: 600px;"
-
-      >
+    <div>
+        <% if @address.photos.attached? %>
+          <%= cl_image_tag  @address.photos.first.key, style:"height: 600px; width: 100%; crop: fill "%>
+      <% else %>
+       <img src="https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-6.png" alt="no photo">
+      <% end %>
     </div>
 
     <div class="address-show">
@@ -45,14 +44,12 @@
       </div>
 
       <h4 class="description"><strong>Description: </strong><%= @address.description %></h4>
-      <% if @address.photos.attached? %>
-       <% @address.photos.each do |photo| %>
-        <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-      <% end %>
+      <% unless @address.photos.second.nil? %>
+        <%= cl_image_tag @address.photos.second.key, height: 300, width: 400, crop: :fill %>
       <% else %>
         <img src="https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-6.png" alt="no photo">
       <%end %>
-      <%#= link_to "My addresses", addresses_path %>
+
 
     <div class="show-buttons">
       <a><%= link_to "Edit my address", edit_address_path, class: "btn btn-1" %></a>

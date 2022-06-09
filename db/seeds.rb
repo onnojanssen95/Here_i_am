@@ -7,7 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 email_address = %w(1@1.com 2@2.com 3@3.com 4@4.com 5@5.com)
-username = %w(daan klaas henk piet sjaak)
+username = %w(Ion Ion Ion Ion Ion)
 User.destroy_all
 Address.destroy_all
 
