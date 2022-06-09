@@ -187,9 +187,14 @@
         <h2>Would you like to add a picture?</h2>
       </div>
 
-      <div class="upload-picture">
-        <%# <%= f.input :photo, as: :file %> %>
+      <div class="upload-picture d-none">
+        <%# <%= f.input :photo, as: :file %>
         <%= f.input :photos, as: :file, input_html: { multiple: true, data: {'canvas-target': 'input'} } %>
+      </div>
+
+      <div class="upload-picture">
+        <%# <%= f.input :photo, as: :file %>
+        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
       </div>
 
       <div class="final-input">
