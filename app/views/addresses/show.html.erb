@@ -47,7 +47,9 @@
       <h4 class="description"><strong>Description: </strong><%= @address.description %></h4>
       <% if @address.photos.attached? %>
        <% @address.photos.each do |photo| %>
-        <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+        <div>
+          <%= cl_image_tag photo.key, crop: :fill, style: "width: 100%;" %>
+        </div>
       <% end %>
       <% else %>
         <img src="https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-6.png" alt="no photo">

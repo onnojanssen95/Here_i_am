@@ -21,7 +21,15 @@ export default class extends Controller {
   #addMarkersToMap() {
     // this.mapBoxMarkers = []
     this.markersValue.forEach((marker) => {
-      this.mapBoxMarkers.push(new mapboxgl.Marker({draggable: true})
+      const customMarker = document.createElement("div")
+      customMarker.className = "marker"
+      customMarker.style.backgroundImage = `url('https://res.cloudinary.com/dzeqloola/image/upload/v1654765307/HereIAm/imagefiles_location_map_pin_light_green10_mfoiec.png')`
+      customMarker.style.backgroundSize = "initial"
+      customMarker.style.backgroundRepeat = 'no-repeat'
+      customMarker.style.backgroundSize = 'contain'
+      customMarker.style.width = "27px"
+      customMarker.style.height = "41px"
+      this.mapBoxMarkers.push(new mapboxgl.Marker(customMarker, {draggable: true})
       .setLngLat([marker.lng, marker.lat])
       .addTo(this.map))
     })
@@ -74,11 +82,12 @@ export default class extends Controller {
         const customMarker = document.createElement("div")
         customMarker.className = "marker"
 
-        customMarker.style.backgroundImage = `url('/assets/mapbox-marker-icon-20px-red.png')` 
+        customMarker.style.backgroundImage = `url('https://res.cloudinary.com/dzeqloola/image/upload/v1654764562/HereIAm/red_folded_marker_l1y9oh.png')`
         customMarker.style.backgroundSize = "initial"
         customMarker.style.backgroundRepeat = 'no-repeat'
-        customMarker.style.width = "25px"
-        customMarker.style.height = "25px"
+        customMarker.style.backgroundSize = 'contain'
+        customMarker.style.width = "27px"
+        customMarker.style.height = "41px"
         const newMarker = new mapboxgl.Marker(customMarker, {draggable: true})
         .setLngLat([e.lngLat.lng, e.lngLat.lat])
         .addTo(this.map)
@@ -86,8 +95,8 @@ export default class extends Controller {
         if(this.mapBoxMarkers.length > 1){
           // console.log(this.mapBoxMarkers[this.mapBoxMarkers.length - 1]._element)
           // this.mapBoxMarkers[this.mapBoxMarkers.length - 1]._element.style.backgroundImage = `url('/assets/greyfoldedpin.png')`
-          this.mapBoxMarkers[this.mapBoxMarkers.length - 1]._element.style.backgroundImage = `url('/assets/mapbox-marker-icon-20px-purple.png')`
-
+          this.mapBoxMarkers[this.mapBoxMarkers.length - 1]._element.style.backgroundImage = `url('https://res.cloudinary.com/dzeqloola/image/upload/v1654764557/HereIAm/greyfoldedpin_dtpnlt.png')`
+          this.mapBoxMarkers[this.mapBoxMarkers.length - 1]._element.style.backgroundSize = `contain`
         }
         this.mapBoxMarkers.push(newMarker)
         let coordsArr = this.mapBoxMarkers.map(item => [item.getLngLat().lng, item.getLngLat().lat])
