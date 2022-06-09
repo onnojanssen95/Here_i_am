@@ -74,7 +74,7 @@ export default class extends Controller {
         const customMarker = document.createElement("div")
         customMarker.className = "marker"
 
-        customMarker.style.backgroundImage = `url('/assets/mapbox-marker-icon-20px-red.png')`
+        customMarker.style.backgroundImage = `url('/assets/mapbox-marker-icon-20px-red.png')` 
         customMarker.style.backgroundSize = "initial"
         customMarker.style.backgroundRepeat = 'no-repeat'
         customMarker.style.width = "25px"
