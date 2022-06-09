@@ -1,5 +1,24 @@
 // Specific CSS for your home-page
 
+#hereiam {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  color: #2CE080;
+}
+
+#hey {
+  font-size: 30px;
+  text-align: center;
+  color: #002F54
+}
+
+#now {
+  font-size: 20px;
+  text-align: center;
+  color: #002F54
+}
+
 body {
   background-color: white;
 }
@@ -7,7 +26,7 @@ body {
 .container-homepage {
   height: 540px;
   width: 360px;
-  margin-top: 140px;
+  margin-top: 53px;
   width: 100%;
   align-items: center;
   display: flex;
@@ -23,29 +42,29 @@ body {
 display: flex;
 width: 328px;
 position: absolute;
-bottom: 260px;
+bottom: 240px;
 flex-direction: column;
 display: flex;
 align-items: left;
 justify-content: center;
 color: #042330;
-font-family: 'Berlin Bold Bold';
+// font-family: 'Berlin Bold Bold';
 letter-spacing: 1px;
 }
 
-.container-1 h3 {
-  font-size: 12px;
-}
-.container-1 h1 {
-  font-size: 20px;
-  text-align: left;
-}
+// .container-1 h3 {
+//   font-size: 12px;
+// }
+// .container-1 h1 {
+//   font-size: 20px;
+//   text-align: left;
+// }
 
 .container-2 {
   // height: 200px;
   display: flex;
   position: absolute;
-  bottom: 122px;
+  bottom: 114px;
   align-items: center;
   justify-content: center;
 }

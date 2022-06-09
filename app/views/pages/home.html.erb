@@ -1,16 +1,19 @@
 <div class="container-homepage">
+          <h1 id="hereiam">Here I Am</h1>
+          <br>
+          <br>
 
-  <img  src="<%= asset_url('front.png') %>" alt="A guy with that holds pins" width="328" height="225">
+  <img  src="<%= asset_url('front.png') %>" alt="A guy with earthball holds pins" width="328" height="225">
 
     <div class="container-1">
 
         <% if user_signed_in? %>
-          <h1><strong>Hey <%= current_user.user_name || current_user.email %></strong></h1>
+          <h1 id="hey">Hey <%= current_user.user_name || current_user.email %></h1>
         <% else %>
           <h2>Please log in</h2>
         <% end %>
 
-        <h3>Welcome to the guide that never lets your rider get lost. </h3>
+        <h3 id="now"> Now you will be found! </h3>
     </div>
 
       <div class="container-2">
