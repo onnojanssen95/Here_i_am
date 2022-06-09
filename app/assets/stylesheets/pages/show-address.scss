@@ -40,9 +40,10 @@
 }
 
 .other-info {
-  padding: 20px 10px;
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
+  margin-left: 20px;
 }
 
 .other-info i {
@@ -63,7 +64,7 @@
 // }
 
 .floor {
-  background-color: #82DBD8;
+  background-color: #F1F6F4;
   border-radius: 8px;
   font-size: 40px;
   color: black;
@@ -82,28 +83,38 @@
 }
 
 .elevator {
-  background-color: #82DBD8;
+  background-color: #F1F6F4;
   border-radius: 8px;
   width: 100px;
   height: 100px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
 
+.elevator h3 {
+  font-size: 17px;
 }
 
 .place-in-building {
-  background-color: #82DBD8;
+  background-color: #F1F6F4;
   border-radius: 8px;
   width: 100px;
   height: 100px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
+.place-in-building h3 {
+  font-size: 17px;
+}
+
+
 .description {
-  padding: 20px;
+  padding: 20px 20px 20px 40px;
 }
 
 .show-buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: 20px;
+  padding: 15px 0;
 }
