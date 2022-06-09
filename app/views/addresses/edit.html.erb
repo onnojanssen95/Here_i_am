@@ -1,5 +1,5 @@
 <div class="container-new-address">
-<%# create a new data controler , canvas  %>  xx
+<%# create a new data controler , canvas  %>
 <%# console log when the controller in rendert %>
 <%# create a data action on the sumbit button that console.logs something else(test) %>
 <%# data target on the canvas element. %>
@@ -160,23 +160,32 @@
       <div class="address-up">
         <h4><%= @address.address %></h4>
       </div>
+
       <div data-controller="map"
         id="map"
         data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
         data-map-markers-value="<%= @markers.to_json %>"
         preserveDrawingBuffer="true"
         style="width: 100%; height: 560px;">
-
       </div>
-      <div onclick="takeScreenshot()" style="float: right:" class="btn-2">take screenshot</div>
+
+      <div onclick="takeScreenshot()" style="float: right:" class="next-button-2">Take a screenshoot and go next</div>
       <div class="next-button-1" data-action="click->mappins#next">
-        <h5>Next</h5>
       </div>
     </div>
 
+    <div class="container-screenshoot">
+      <div id="screenshot" data-canvas-target="canvas">
 
-    <div id="screenshot" data-canvas-target="canvas">
+        <div class="address-up">
+          <h4><%= @address.address %></h4>
+        </div>
+        <div class="next-next">
+          <div class="next-button-3" data-action="click->canvas#next"><h5>Next</h5></div>
+        </div>
+      </div>
     </div>
+
     <div class="add-picture">
       <div class="address-up">
         <h4><%= @address.address %></h4>
@@ -188,16 +197,19 @@
       </div>
 
       <div class="upload-picture d-none">
+
+        <%# <%= f.input :photo, as: :file %>
+
         <%= f.input :photos, as: :file, input_html: { multiple: true, data: {'canvas-target': 'input'} } %>
       </div>
 
       <div class="upload-picture">
+
         <%= f.input :photos, as: :file, input_html: { multiple: true } %>
       </div>
 
-
       <div class="final-input">
-        <%= f.submit %>
+        <%= f.submit "Save your address" %>
       </div>
 
     </div>
@@ -209,7 +221,8 @@
   const takeScreenshot = (event) => {
     html2canvas(document.querySelector("#map")).then(canvas => {
       const screenshotContainer = document.getElementById('screenshot')
-      screenshotContainer.appendChild(canvas)
+      screenshotContainer.appendChild(canvas);
+      document.getElementById('screenshot').scrollIntoView();
     });
   }
 </script>

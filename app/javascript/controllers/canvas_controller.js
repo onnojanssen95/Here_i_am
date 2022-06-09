@@ -25,4 +25,9 @@ export default class extends Controller {
     }
   }
 
+  next(event) {
+    document.querySelector('.add-picture').scrollIntoView();
+  }
+
+
 }

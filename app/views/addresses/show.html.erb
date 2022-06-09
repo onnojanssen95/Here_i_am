@@ -44,12 +44,12 @@
       </div>
 
       <h4 class="description"><strong>Description: </strong><%= @address.description %></h4>
+
       <% unless @address.photos.second.nil? %>
         <%= cl_image_tag @address.photos.second.key, height: 300, width: 400, crop: :fill %>
       <% else %>
         <img src="https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-6.png" alt="no photo">
       <%end %>
-
 
     <div class="show-buttons">
       <a><%= link_to "Edit my address", edit_address_path, class: "btn btn-1" %></a>
